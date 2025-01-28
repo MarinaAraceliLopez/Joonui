@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Store</title>
+    <link rel="stylesheet" href="css/styless.css">  
+</head>
+<body>
+      <!-- Ir Arriba -->
+<div class="go-top">
+    <span class="fas fa-angle-up"></span>
+  </div>
+  
+  <!-- Menu de Navegacion -->
+  <header id="header">
+    <nav class="menu">
+      <!-- Logo a la izquierda -->
+      <div class="logo">
+        <a href=""><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <ul class="menu-links">
+       <!-- Categoría: Impresión 3D -->
+       <li class="dropdown">
+        <a href="impresion3d.html" class="impresion-3d">
+            <i class="fas fa-shopping-cart"></i> Impresión 3D
+        </a>             
+    </li>
+    
+    <li class="dropdown">
+        <a href="amigurumis.html" class="impresion-3d">
+            <i class="fas fa-shopping-cart"></i> Amigurumi
+        </a>             
+    </li> 
+    
+    <li class="dropdown">
+        <a href="index.html" class="home-link">
+            <i class="fas fa-home"></i> Home
+        </a>   
+    </li>
+  
+      </ul>
+    </nav>   
+  </header>
+  <header class="minimal-banner">
+    <div class="banner-wrapper">
+      <div class="slider">
+        <h1>Descubre Productos Únicos</h1>
+        <p>Personalizados especialmente para ti. ¡Explora nuestra colección ahora!</p>
+      </div>
+      <div class="slider">
+        <h1>Crea Objetos Personalizados</h1>
+        <p>Innovación en tus manos con nuestra tecnología de impresión.</p>
+      </div>
+      <div class="slider">
+        <h1>Regalos Únicos</h1>
+        <p>Encuentra el regalo perfecto con un toque especial.</p>
+      </div>
+    </div>
+  </header>
+  
+  
+    
+
+    <main>
+        
+        <!-- Filtros -->
+        <aside class="filters">         
+            <h3 class="titulo">Filtrar por:</h3> <br>   
+            <label for="category-filter">Categorías:</label>
+            <select id="category-filter">
+                <option value="all">Todas</option>
+                <option value="chapitas">Chapitas</option>                
+                <option value="llaveros">Llaveros</option>
+                <option value="macetas">Macetas</option>
+                <option value="mates">Mates</option>                                           
+                <option value="merchandising">Merchandising</option>               
+                <option value="tazas-personalizadas">Tazas Personalizadas</option>               
+            </select>
+
+            <label for="price-filter">Rango de precio:</label>
+            <input type="number" id="price-min" placeholder="Mínimo">
+            <input type="number" id="price-max" placeholder="Máximo">
+            <button id="filter-button">Filtrar</button><br>
+           
+
+              
+        </aside>
+
+
+        
+        <section class="products" id="mates macetas">
+            
+           
+        <div class="product" data-category="mates" data-price="10500">
+            <div class="carousel">
+                <img src="img/dmate.png" alt="Mate-Personalizado" class="carousel-image">
+                <img src="img/mate2.png" alt="Mate-Personalizado" class="carousel-image" style="display: none;">
+            </div>
+            <h3>Mate Personalizado</h3> 
+            <p>Personaliza tu mate con tu nombre, escudo o diseño que gustes.</p> 
+            <div class="precio">
+                <p class="medidas"><br>Altura: 11,5cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $10.500 </p>
+            </div>
+        </div>
+       
+
+            <div class="product" data-category="mates" data-price="10500">
+                <img src="img/amate.png" alt="Mate-Personalizado">
+                <h3>Mate Singer</h3>
+                <p>Ideal para quienes buscan un diseño único con un toque especial.</p>
+                <div class="precio">
+                    <p class="medidas"><br>Altura: 11,5cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $10.500</p>
+                </div>
+            </div>
+    
+              
+            <div class="product" data-category="macetas" data-price="5500">
+                <div class="carousel">
+                    <img src="img/ñmaceta.png" alt="Maceta-Robert" class="carousel-image">
+                    <img src="img/macet.png" alt="Maceta-Robert" class="carousel-image" style="display: none;">
+                </div>                
+                <h3>Maceta Estilo Robert</h3>
+                <p>¡Imprimimos tus ideas! Elegí el tamaño, color y diseño que más te guste.</p>
+                <div class="precio">
+                    <p class="medidas"><br> Altura: 9cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $5.500</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="macetas" data-price="3000">
+                <img src="img/vmaceta.png" alt="Maceta-Robert">
+                <h3>Maceta Estilo Robert</h3>
+                <p>Hacemos realidad tus macetas soñadas con el estilo único de Robert.</p>
+                <div class="precio">
+                    <p class="medidas"><br> Altura: 6cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $3.000</p>
+                </div>
+             </div>
+
+             <div class="product" data-category="llaveros" data-price="1500">
+                <div class="carousel">
+                    <img src="img/bllavero.png" alt="Llavero-Personalizado" class="carousel-image">
+                    <img src="img/lave1.png" alt="Llavero-Personalizado" class="carousel-image">                    
+                    <img src="img/lave4.png" alt="Llavero-Personalizado" class="carousel-image" style="display: none;">
+                </div>
+                <h3>Llavero Personalizado</h3> 
+                <p>¡Imprime tu llavero personalizado en 3D! Elige el diseño, forma, color, etc. </p>  
+                <div class="precio">
+                    <p class="medidas"><br> 4cm x 4cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $1.500</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="llaveros" data-price="1500">
+                <div class="carousel">
+                    <img src="img/lave7.png" alt="Llavero-Personalizado" class="carousel-image">
+                    <img src="img/lave6.png" alt="Llavero-Personalizado" class="carousel-image">                    
+                    <img src="img/lave5.png" alt="Llavero-Personalizado" class="carousel-image" style="display: none;">
+                </div>
+                <h3>Llavero Mafalda</h3> 
+                <p>Para los amantes de Mafalda. Ideal para regalar o lucir con orgullo.</p> 
+                <div class="precio">
+                    <p class="medidas"><br> 4cm x 5cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $1.500</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="chapitas" data-price="2500">
+                <img src="img/qllavero.png" alt="Identificador-Mascota">
+                <h3>Chapitas Personalizadas</h3>
+                <p>Diseñadas para llevar el nombre y contacto de tu mejor amigo peludo</p>
+                <div class="precio">
+                    <p class="medidas"><br> 4cm x 5cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $3.000</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="chapitas" data-category="llaveros" data-price="2500">
+                <img src="img/rllavero.png" alt="Identificador-Mascota">
+                <h3>Chapitas Personalizadas</h3>
+                <p>Personalizá el color y grabá su nombre junto con tu contacto.</p>
+                <div class="precio">
+                    <p class="medidas"><br> 2cm x 5cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $2.500</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="chapitas" data-price="2500">
+                <img src="img/fidel.jpg" alt="Identificador-Mascota">
+                <h3>Chapitas Personalizado</h3>
+                <p>Un diseño clásico y funcional para identificar a tu mascota.</p>
+                <div class="precio">
+                    <p class="medidas"><br> 3cm x 3cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $2.500</p>
+                </div>
+            </div>
+
+            <div class="product" data-category="merchandising" data-price="1500">
+                <div class="carousel">
+                    <img src="img/zlogo.png" alt="Llavero-Personalizado" class="carousel-image">
+                                    
+                    <img src="img/z1logo.jpg" alt="Llavero-Personalizadoi" class="carousel-image" style="display: none;">
+                </div>
+                <h3>Llavero Merchandising</h3> 
+                <p>Llavero 3D con el logo de tu empresa, ideal para merchandising.</p> 
+                <div class="precio">
+                    <p class="medidas"><br> 4cm x 4cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $1.500</p>
+                </div>
+            </div>
+           
+
+            <div class="product" data-category="tazas-personalizadas" data-price="11500">
+                <img src="img/taza.png" alt="Taza-Personalizado">
+                <h3>Taza Dragon Ball</h3>
+                <p>Perfecta para los fanáticos. Incluye un porta vaso impreso en 3D.</p>
+                <div class="precio">
+                    <p class="medidas"><br> - </p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $11.500</p>
+                </div>
+            </div>
+           
+            <div class="product" data-category="tazas-personalizadas" data-price="11500">
+                <img src="img/ftaza.png" alt="Taza-Personalizado">
+                <h3>Taza Mike Wazowski</h3>
+                <p>Acompañada de un porta vaso impreso en 3D.</p>
+                <div class="precio">
+                    <p class="medidas"><br> - </p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $11.500</p>
+                </div>
+            </div>
+      
+            <div class="product" data-category="tazas-personalizadas" data-price="11500">
+                <img src="img/wtaza.png" alt="Taza-Personalizado">
+                <h3>Taza Sailor Moon</h3>
+                <p>Acompañada de un porta vaso impreso en 3D.</p>
+                <div class="precio">
+                    <p class="medidas"><br> - </p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $11.500</p>
+                </div>
+            </div>
+           
+            <div class="product" data-category="merchandising" data-price="46000">
+                <div class="carousel">
+                    <img src="img/gmercha.png" alt="Logo-Corpóreo" class="carousel-image">
+                    <img src="img/dien.png" alt="Logo-Corpóreo" class="carousel-image" style="display: none;">
+                </div>
+                <h3>Logo Corpóreo</h3> 
+                <p>Diseñado a tus necesidades y estilo de marca.</p>
+                <div class="precio">
+                    <p class="medidas"><br> Personalizable</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> A Cotizar</p>
+                </div>
+            </div>  
+
+            <div class="product" data-category="merchandising" data-price="10000">
+                <div class="carousel">
+                    <img src="img/omercha.png" alt="Logo-Escultural" class="carousel-image">
+                    <img src="img/pmercha.png" alt="Logo-Escultural" class="carousel-image" style="display: none;">
+                </div>
+                <h3>Logo Escultura</h3>
+                <p>Una versión artística y tangible del logo, ideal para exhibir en vitrinas.</p> 
+                <div class="precio">
+                    <p class="medidas"><br> 10cm x 10cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $10.000</p>
+                </div>
+            </div>        
+           
+
+             <div class="product" data-category="mates3d" data-price="8500">
+                <img src="img/c.png" alt="Porta-Ovillo">
+                <h3>Porta Ovillos</h3>
+                <p>El ovillo gire libremente al tejer, evitando enredos y caídas.</p>
+                <div class="precio">
+                    <p class="medidas"><br> 8cm x 10cm</p>
+                    <div class="separator"></div>
+                    <p class="valor"><br> $8.500</p>
+                </div>
+      
+
+
+      
+        </section>
+
+       
+   
+       
+    </main>
+   
+   
+   
+    <p id="no-results" style="display: none;">No se encontraron productos que coincidan con los filtros.</p>
+       
+    
+ 
+
+    
+   <!-- Footer -->
+<footer class="footer">
+    <div class="skew-arriba"></div>
+    <div class="deg-footer"></div>
+  
+    <div class="ejeZfooter">
+        <!-- Contenido principal del footer -->
+        <div class="footer-content">
+            <div class="footer-text">
+                <p><i>Corrientes Capital - Argentina</i></p>
+                <!-- Invitación a contactar -->
+                 
+                <p>¡Contáctanos por <b> WhatsApp</b> o <b>Instagram!</b></p>
+                <!-- Iconos centrados -->
+                <div class="footer-socials">
+                    <a href="https://wa.me/5493794591718?" target="_blank">
+                        <img src="img/whatsapp.svg" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/joonui3d/" target="_blank">
+                        <img src="img/instagram_1.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Botón de WhatsApp fijo en el lado -->
+    <div class="whatsapp">
+        <a href="https://wa.me/5493794591718?" target="_blank">
+            <img src="img/whatsapp.svg" alt="WhatsApp">
+        </a>
+    </div>
+  
+    <!-- Botón de Instagram fijo en el lado -->
+    <div class="instagram">
+        <a href="https://www.instagram.com/joonui3d/" target="_blank">
+            <img src="img/instagram_1.png" alt="Instagram">
+        </a>
+    </div>
+  </footer>
+  
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a90f1b68c4.js" crossorigin="anonymous"></script>   
+    <script src="js/Open&Close.js"></script>
+    <script src="js/menu.js"></script>  
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>        
+    <script src="js/slider.js"></script>     
+</body>
+</html>

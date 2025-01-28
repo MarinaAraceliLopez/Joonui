@@ -1,0 +1,1043 @@
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+:root {
+    --red: #ff2e63;
+    --black: #252a34;
+    --blue: #08d9d6;
+    --white: #eaeaea;
+    --title: 35px;
+    --text: 19px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffff;
+    overflow-x: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.go-top {
+    position: fixed;
+    bottom: 190px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #2a1f59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s;
+    margin: 0 5px;
+    border-radius: 50px;
+    right: 0%;
+}
+
+.go-top:hover {
+    background: var(--red);
+    color: #fff;
+    border: 2px solid var(--white);
+}
+
+.go-top:hover span {
+    color: var(--white);
+}
+
+.go-top>span {
+    font-size: 30px;
+    color: var(--black);
+}
+
+
+/** Skew **/
+
+
+section.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+/** Navegation Menu **/
+/* Estilo general del contenedor del menú */
+nav.menu {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #0a0816, #3a2c80);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 785px) {
+    nav.menu {
+        flex-direction: column; /* Cambiar la disposición a columna en pantallas pequeñas */
+        width: 237px; /* Establecer el ancho del menú a 237px */
+        padding: 10px; /* Ajustar el padding en pantallas pequeñas */
+    }
+
+    /* Ajustar el logo y el menú para que no se vean demasiado grandes en pantallas pequeñas */
+    nav.menu .logo {
+        margin-bottom: 10px; /* Separar el logo del menú en pantallas pequeñas */
+    }
+
+    nav.menu ul {
+        width: 100%; /* Asegurarse de que el menú ocupe todo el ancho disponible */
+        text-align: center; /* Centrar los íconos del menú */
+    }
+
+    nav.menu li {
+        width: 100%; /* Que cada ítem ocupe todo el ancho disponible */
+        padding: 10px 0; /* Ajustar el padding para que haya espacio suficiente */
+    }
+}
+
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    nav.menu {
+        width: 100%; /* Asegura que el menú ocupe todo el ancho en pantallas más pequeñas */
+        padding: 10px 0;
+    }
+    nav.menu ul {
+        text-align: center;
+    }
+    nav.menu li {
+        padding: 8px 0;
+    }
+}
+
+
+/* Logo */
+.logo-container {
+    flex-shrink: 0; /* Evita que el logo cambie de tamaño */
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Altura del logo */
+    max-width: 100%;
+}
+
+/* Menú */
+.menu-links {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centra los elementos del menú */
+    align-items: center;
+    flex-grow: 1; /* El menú ocupa el espacio restante */
+    
+   }
+
+   .impresion-3d {
+    background: white; /* Fondo blanco para los dos primeros */
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+   
+}
+
+.home-link {
+    background: #f85408bf; /* Fondo anaranjado para el Home */
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white; /* Color del texto */
+}
+
+.impresion-3d i.fas,
+.home-link i.fas {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.home-link i.fas.fa-home {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+/* Colores específicos para cada enlace */
+.menu-links a.violet {
+    background-color: #2f265d;
+    color: white;
+}
+
+.menu-links a.white {
+    background-color: white;
+    color: #2f265d;
+    border: 2px solid #2f265d;
+}
+
+/* Hover para todos los enlaces */
+.menu-links a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav.menu {
+        flex-direction: column; /* Alinea el contenido en columna */
+        align-items: center;
+    }
+
+    .logo-container {
+        align-self: flex-start; /* Alinea el logo al principio */
+    }
+
+    .menu-links {
+        flex-direction: column; /* Los elementos del menú estarán en columna */
+        gap: 10px; /* Reduce el espacio entre botones */
+    }
+
+    .menu-links a {
+        width: 100%; /* Ocupa el ancho completo del contenedor */
+        text-align: center; /* Asegura que el texto esté centrado */
+        padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+/* Opcional: Estilo para pantallas medianas */
+@media (max-width: 1024px) {
+    .menu-links a {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        padding: 8px 15px; /* Ajusta el padding */
+    }
+}
+
+
+/** Acerca de Nosotros **/
+
+.acerca-de .info-container .about-gallery {
+    pointer-events: none; /* Desactiva los eventos de clic */
+    cursor: default;      /* Evita que el cursor cambie a "pointer" */
+}
+
+
+.acerca-de .info-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.acerca-de .info-container p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+.acerca-de .info-container .about-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+
+.acerca-de .info-container .about-gallery img {
+    width: calc(33.333% - 10px);
+    height: 300px;
+    margin: 10px 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.acerca-de .info-container .about-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more button {
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background: var(--red);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    
+    transition: 0.5s;
+}
+
+.acerca-de .info-container .about-more button:hover {
+    background: var(--blue);
+}
+
+@media only screen and (max-width:773px) {
+    .acerca-de .info-container .about-gallery {
+        flex-direction: column;
+    }
+
+    .acerca-de .info-container .about-gallery img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:590px) {
+    .acerca-de .info-container h1 {
+        font-size: 30px;
+    }
+
+    .acerca-de .info-container p {
+        font-size: 15px;
+    }
+}
+
+.our-projects {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;   
+    animation: changeBackground 12s infinite;
+}
+
+@keyframes changeBackground {
+    0% {
+        background-image: url(../img/co.jpg);
+    }
+    33% {
+        background-image: url(../img/fon1.jpg);
+    }
+    66% {
+        background-image: url(../img/fon.jpg);
+    }
+    100% {
+        background-image: url(../img/co.jpg); /* Vuelve al inicio */
+    }
+}
+
+/* Fondo del contenedor */
+.our-projects .deg-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+/* Contenedor principal */
+.our-projects .ejeZproject {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor para el título del proyecto */
+.our-projects .container-project .project-title {
+    text-align: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    margin: 20px 0;
+}
+
+/* Estilo para h2 en el título */
+.our-projects .container-project .project-title h2 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Estilo para la descripción */
+.our-projects .containeres {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px; /* Limita el ancho del texto para mejor legibilidad */
+    width: 100%; /* Se adapta al ancho del contenedor */
+    height: 100%;
+    margin-left: 1px;
+}
+
+
+/* Estilo para las imágenes del proyecto */
+.our-projects .container-project .project-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Imagen dentro del proyecto */
+.our-projects .container-project .project-img img {
+    width: calc(33.333% - 20px); /* Tres imágenes por fila */
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Hover en imágenes */
+.our-projects .capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.our-projects .capa p {
+    margin: 40px 80px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Mostrar capa al hacer hover */
+.our-projects figure:hover .capa {
+    display: flex;
+    transform: scale(1.05);
+}
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 1200px) {
+    .our-projects .container-project .project-img img {
+        width: calc(50% - 20px); /* 2 imágenes por fila */
+    }
+}
+
+@media only screen and (max-width: 773px) {
+    .our-projects .container-project .project-img img {
+        width: 80%; /* 1 imagen por fila */
+    }
+
+    .our-projects .container-project .project-title h2 {
+        font-size: 28px; /* Ajuste del tamaño de texto */
+    }
+
+    .our-projects .containeres p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 446px) {
+    .our-projects .container-project .project-title h2 {
+        font-size: 24px; /* Título más pequeño en pantallas muy pequeñas */
+    }
+
+    .our-projects .containeres p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .our-projects .container-project .project-img img {
+        width: 100%; /* Ajusta la imagen a toda la pantalla */
+    }
+}
+
+
+
+/** Testimonios **/
+.testimonios {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.testimonios .testimonios-title {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+.testimonios .testimonios-title h2 {
+    font-size: 50px;
+    font-weight: normal;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.testimonios .testimonios-title hr {
+    width: 60%;
+    height: 2px;
+    margin: auto;
+    background: var(--black);
+}
+
+.testimonios .box-testimonio {
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonios .box-testimonio .card-testimonio {
+    width: 45%;
+    margin: 20px;
+}
+
+.testimonios .box-testimonio .card-testimonio .card-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.testimonios .box-testimonio .card-testimonio .card-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testimonios .box-testimonio .card-testimonio .testimonio-text {
+    border: 2px solid var(--red);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.testimonios .box-testimonio .card-testimonio .testimonio-text h4 {
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--red);
+    text-align: center;
+    margin-bottom: 10px;
+    transition: 0.1s;
+}
+
+.testimonios .box-testimonio .card-testimonio .testimonio-text p {
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: var(--black);
+}
+
+.testimonios .box-testimonio .card-testimonio .testimonio-text:hover {
+    border: 2px solid var(--blue);
+}
+
+.testimonios .box-testimonio .card-testimonio .testimonio-text:hover h4 {
+    color: var(--blue);
+}
+
+@media only screen and (max-width:890px) {
+    .testimonios .box-testimonio .card-testimonio .card-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .testimonios .box-testimonio .card-testimonio {
+        width: 100%;
+    }
+
+    .testimonios .box-testimonio .card-testimonio .testimonio-text h4 {
+        font-size: 25px;
+    }
+
+    .testimonios .box-testimonio .card-testimonio .testimonio-text p {
+        font-size: 17px;
+        line-height: 35px;
+    }
+}
+
+/** Footer **/
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.footer .deg-footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer .footer-text {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-text p {
+    margin: 15px 0;
+}
+
+.footer .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.footer .footer-socials a img {
+    width: 20px;
+    transition: transform 0.3s;
+}
+
+.footer .footer-socials a img:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 0px;
+    background-color: #3a2c80;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 5px;
+  }  
+
+.whatsapp img{   
+    width: 30px;
+    margin-top: 14%;
+}
+
+.instagram {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 13px;
+    right: 0px;
+    bottom: 25px; 
+    background-color: #3a2c80;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 5px
+}
+
+.instagram img {
+    width: 55%;
+    margin-top: 23%;
+}
+
+.produtofijo  {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 135px;
+    right: 0px;
+    background-color: rgb(210, 84, 5); /* Fondo naranja */
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 5px
+}
+
+.produtofijo a i {
+    color: #fff; /* Color blanco para el icono */
+    line-height: 50px; /* Centra verticalmente el ícono */
+    font-size: 25px;
+}
+
+
+@media only screen and (max-width: 590px) {
+    .footer .footer-text {
+        font-size: 16px;
+    }
+    .footer .footer-socials a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/*Contenedor texto imagen*/
+.container-project figure {
+    position: relative;
+    height: 30%;
+    cursor: pointer;
+    width: 30%;
+    overflow: hidden;
+    border-radius: 6px;
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 10px
+}
+
+.container-project figure img {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+    margin: 10px;
+}
+
+.container-project figure .capa {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.486);
+    transition: all 500ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+   
+}
+
+.capa .p{
+    justify-content: center;
+    text-align: center ;
+    padding: 50px;
+
+}
+.container-project figure:hover>.capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container-project figure:hover>.capa h3 {
+    margin-top: 70px;
+    margin-bottom: -30px;
+}
+
+.container-project figure:hover>img {
+    transform: scale(1.3);
+}
+
+
+.precio {
+    padding:4px;
+    background-color: #000000;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 4%;
+}
+
+.separator {
+    border-top: 4px solid #000;  /* Una línea de 1px de grosor y color negro */
+    margin: 10px 0;  /* Espaciado alrededor de la línea */
+  }
+
+/* Estilo para los párrafos dentro del contenedor precio */
+.precio p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Añadir texto dinámico para "Medidas" */
+.medidas::before {
+    content: "Medidas: ";
+    font-weight: bold;
+}
+
+/* Añadir texto dinámico para "Precio" */
+.valor::before {
+    content: "Precio: ";
+    font-weight: bold;
+}
+
+.containeres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 50%;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.712); /* Fondo del contenedor */
+    margin-left: 25%;
+    
+}
+
+
+
+.Subtitulo {
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+    line-height: 35px;
+    background: #ffffffcd;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 50%;
+    font-weight: 500;
+}
+/* Estilo de la columna de filtros */
+.filters {
+    width: 200px; /* Tamaño de la columna de filtros */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+  }
+  
+  .filters h3 {
+    margin-top: 0;
+  }
+  
+  .filters label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .filters select, .filters input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .filters button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6a0dad; /* Color violeta */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .filters button:hover {
+    background-color: #8a2be2;
+  }
+  
+  /* Ajuste de los productos al lado derecho */
+  .products  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 220px; /* Espacio para la columna de filtros */
+  }
+
+  .productss {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 220px; /* Espacio para la columna de filtros */
+  }
+  
+  
+  .product {
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product h3 {
+    margin: 10px 0;
+  }
+  
+  .product p {
+    margin: 5px 0;
+  }
+  
+  .section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* General del banner */
+.minimal-banner {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    z-index: -1;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    padding: 0 10px; /* Agregado para asegurar que no haya desbordes */
+}
+
+/* Contenedor de las slides */
+.banner-wrapper {
+    display: flex;
+    width: 300%;
+    animation: slideFade 12s infinite;
+    transition: transform 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Cada slide */
+.slider {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slider h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+    transition: font-size 0.3s ease; /* Transición en tamaño */
+}
+
+.slider p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    text-align: center;
+    transition: font-size 0.3s ease; /* Transición en tamaño */
+}
+
+/* Imagen */
+.slider img {
+    width: 100%; /* Asegura que la imagen se estire al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+}
+
+/* Animación */
+@keyframes slideFade {
+    0%, 20% { transform: translateX(0%); }
+    33.33%, 53.33% { transform: translateX(-100%); }
+    66.66%, 86.66% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+/* Responsive Design */
+
+/* Para pantallas grandes (desktops) */
+@media (min-width: 1024px) {
+    .minimal-banner {
+        height: 200px; /* Mantiene el tamaño original */
+    }
+    .slider h1 {
+        font-size: 2.5rem; /* Título más grande en pantallas grandes */
+    }
+    .slider p {
+        font-size: 1.2rem; /* Tamaño de texto más grande */
+    }
+}
+
+/* Para pantallas medianas (tabletas y pantallas de laptops pequeñas) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .minimal-banner {
+        height: 180px; /* Ajustamos el tamaño del banner */
+    }
+    .slider h1 {
+        font-size: 2rem; /* Reduce ligeramente el tamaño del título */
+    }
+    .slider p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Para pantallas pequeñas (móviles grandes y medianos) */
+@media (max-width: 768px) {
+    .minimal-banner {
+        height: 150px; /* Hace el banner más compacto */
+    }
+    .slider h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+    }
+    .slider p {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+    .minimal-banner {
+        height: 120px; /* Reduce aún más el tamaño del banner */
+    }
+    .slider h1 {
+        font-size: 1.2rem; /* Ajuste adicional en el tamaño del título */
+    }
+    .slider p {
+        font-size: 0.85rem; /* Ajuste adicional en el tamaño del texto */
+    }
+}

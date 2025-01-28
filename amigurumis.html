@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigurumis Store</title>
+    <link rel="stylesheet" href="css/styless.css">  
+</head>
+<body>
+      <!-- Ir Arriba -->
+<div class="go-top">
+    <span class="fas fa-angle-up"></span>
+  </div>
+  
+  <!-- Menu de Navegacion -->
+  <header id="header">
+    <nav class="menu">
+      <!-- Logo a la izquierda -->
+      <div class="logo">
+        <a href=""><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <ul class="menu-links">
+       <!-- Categoría: Impresión 3D -->
+       <li class="dropdown">
+        <a href="impresion3d.html" class="impresion-3d">
+            <i class="fas fa-shopping-cart"></i> Impresión 3D
+        </a>             
+    </li>
+    
+    <li class="dropdown">
+        <a href="amigurumis.html" class="impresion-3d">
+            <i class="fas fa-shopping-cart"></i> Amigurumi
+        </a>             
+    </li> 
+    
+    <li class="dropdown">
+        <a href="index.html" class="home-link">
+            <i class="fas fa-home"></i> Home
+        </a>   
+    </li>
+  
+      </ul>
+    </nav>   
+  </header>
+  <header class="minimal-banner">
+    <div class="banner-wrapper">
+        <div class="slider">
+            <h1>Amigurumis Hechos a Mano</h1>
+            <p>Creaciones únicas y adorables. Diseñadas con amor para alegrar cualquier ocasión.</p>
+          </div>
+          <div class="slider">
+            <h1>Seguros y de Calidad</h1>
+            <p>Perfectos para niños: todo está tejido a mano, sin piezas pequeñas ni pegadas.</p>
+          </div>
+          <div class="slider">
+            <h1>El Regalo Ideal</h1>
+            <p>Sorprende a tus seres queridos con un detalle tierno y especial.</p>
+          </div>
+  </header>
+  
+    
+
+    <main>
+        
+        <!-- Filtros -->
+        <aside class="filters">
+            <h3 class="titulo">Filtrar por:</h3> <br>   
+            <label for="category-filter">Categorías:</label>
+            <select id="category-filter">
+                <option value="all">Todas</option>               
+                <option value="animales">Animales</option>              
+                <option value="llaveros">Llaveros</option>               
+                <option value="personajes">Personajes</option>
+                
+            </select>
+
+            <label for="price-filter">Filtrar por precio:</label>
+            <input type="number" id="price-min" placeholder="Mínimo">
+            <input type="number" id="price-max" placeholder="Máximo">
+            <button id="filter-button">Filtrar</button>
+        </aside>
+
+
+        
+        <section class="products" id="mates macetas">
+            
+        </div>
+           <div class="product" data-category="animales" data-price="8500">
+            <img src="img/gatito.png" alt="Gato">
+            <h3>Gato</h3>
+            <p>Un adorable gatito tejido a crochet, perfecto para quienes aman los felinos.</p> 
+            <div class="precio">
+                <p class="medidas"><br> 9cm x 11,5cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $8.500</p>
+            </div>
+        </div>
+
+        <div class="product" data-category="personajes" data-price="3000">
+            <img src="img/l.png" alt="Snoopy">
+            <h3>Snoopy</h3>
+            <p>El icónico Snoopy, recreado en crochet con detalles que capturan su esencia.</p>
+            <div class="precio">
+                <p class="medidas"><br> 9cm x 11,5cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $3.000</p>
+            </div>
+        </div>
+      
+
+        <div class="product" data-category="personajes" data-price="9500">
+            <img src="img/muñeca1.png" alt="Muñeca">
+            <h3>Muñeca</h3> 
+            <p>Esta muñeca está llena de ternura, con su cabello estilizado y su vestido.</p> 
+            <div class="precio">
+                <p class="medidas"><br>10cm x 15cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $9.500</p>
+            </div>
+         </div>
+
+         <div class="product" data-category="personajes" data-price="9500">
+            <img src="img/prin.png" alt="Princesa">
+            <h3>Princesa Elsa</h3> 
+            <p>Muñeca Elsa, de Frozen. Hecho a crochet, completamente a mano.</p> 
+            <div class="precio">
+                <p class="medidas"><br> 12cm x 20cm</p>
+              <div class="separator"></div>
+              <p class="valor"><br> $9.500</p>
+            </div>
+        </div>
+
+       
+        <div class="product" data-category="personajes" data-price="8500">
+            <div class="carousel">
+                <img src="img/Capa 7.png" alt="Hello-Kitty" class="carousel-image">
+                <img src="img/kity.jpg.png" alt="Hello-Kitty" class="carousel-image" style="display: none;">
+            </div>
+            <h3>Hello Kitty</h3> 
+            <p>Esta kitty es suave al tacto y seguro para todos.</p>  
+            <div class="precio">
+                <p class="medidas"><br> 9cm x 11,5cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $8.500</p>
+            </div>
+        </div>
+
+        <div class="product" data-category="animales" data-price="9500">
+            <div class="carousel">
+                <img src="img/Capa 10.png" alt="Hipopótamo" class="carousel-image">
+                <img src="img/hipo2.png" alt="Hipopótamo" class="carousel-image" style="display: none;">
+            </div>
+            <h3>Hipopótamo</h3> 
+            <p>Peluche que estimula y acompaña en todas las etapas de la niñez.</p>
+            <div class="precio">
+                <p class="medidas"><br> 12cm x 15cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $9.500</p>
+            </div>
+        </div>
+      
+        <div class="product" data-category="llaveros" data-price="3900">
+            <div class="carousel">
+                <img src="img/Capa 9.png" alt="León" class="carousel-image">
+                <img src="img/lion.png" alt="León" class="carousel-image" style="display: none;">
+            </div>
+            <h3>León</h3>
+            <p>Llavero de león, para colgarlo en mochilas o donde más te guste.</p>  
+            <div class="precio">
+                <p class="medidas"><br> 10cm x 10cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $3.900</p>
+            </div>
+        </div>     
+
+        <div class="product" data-category="animales" data-price="7200">
+            <img src="img/Capa 11.png" alt="Pato">
+            <h3>Pato</h3> 
+            <p>Adorable Amigurumi, tejido a crochet seguro para niños.</p> 
+            <div class="precio">
+                <p class="medidas"><br> 8cm x 10cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $7200</p>
+            </div>
+        </div>
+
+        <div class="product" data-category="llaveros" data-price="2500">
+            <img src="img/Capa 8.png" alt="Ángel">
+            <h3>Ángel</h3> 
+            <p>Perfecto para souvenirs de Comunión o como llavero.</p> 
+            <div class="precio">
+                <p class="medidas"><br> 5cm x 9cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $2.500</p>
+            </div>
+        </div>
+
+        <div class="product" data-category="animales" data-price="2800">
+            <div class="carousel">
+                <img src="img/Capa 6.png" alt="Princesa" class="carousel-image">
+                <img src="img/Capa 5.png" alt="Princesa" class="carousel-image">
+                <img src="img/angel1.png" alt="Peluche Amigurumi" class="carousel-image" style="display: none;">
+            </div>
+            <h3>Osito</h3> 
+            <p>Tiernos ositos amigurumi, ideales para regalar a niños pequeños</p>  
+            <div class="precio">
+                <p class="medidas"><br> 8cm x 9cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $2.800</p>
+            </div>
+        </div>  
+
+        <div class="product" data-category="animales" data-price="8000">
+            <img src="img/Capa 13.png" alt="Osito">
+            <h3>Carpincho</h3>
+            <p>Tejido con hilo de algodón y relleno con vellón siliconado.</p> 
+            <div class="precio">
+                <p class="medidas"><br> 11cm x 20cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $8.000</p>
+            </div>
+        </div>  
+        
+        <div class="product" data-category="animales" data-price="2800">
+            <div class="carousel">
+                <img src="img/Capa 12.png" alt="Conejo" class="carousel-image">
+                <img src="img/cone1.png" alt="Conejo" class="carousel-image" style="display: none;">
+            </div>
+            <h3>Conejo</h3> 
+            <p>Adorables conejitos, ideal para niños pequeños.</p>
+            <div class="precio">
+                <p class="medidas"><br> 9cm x 8cm</p>
+                <div class="separator"></div>
+                <p class="valor"><br> $2.800</p>
+            </div>
+        </div>  
+
+
+      
+        </section>
+
+       
+   
+       
+    </main>
+   
+   
+    <p id="no-results" style="display: none;">No se encontraron productos que coincidan con los filtros.</p>
+       
+    
+ 
+
+    
+   <!-- Footer -->
+<footer class="footer">
+    <div class="skew-arriba"></div>
+    <div class="deg-footer"></div>
+  
+    <div class="ejeZfooter">
+        <!-- Contenido principal del footer -->
+        <div class="footer-content">
+            <div class="footer-text">
+                <p><i>Corrientes Capital - Argentina</i></p>
+                <!-- Invitación a contactar -->
+                 
+                <p>¡Contáctanos por <b> WhatsApp</b> o <b>Instagram!</b></p>
+                <!-- Iconos centrados -->
+                <div class="footer-socials">
+                    <a href="https://wa.me/5493794591718?" target="_blank">
+                        <img src="img/whatsapp.svg" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/joonui3d/" target="_blank">
+                        <img src="img/instagram_1.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Botón de WhatsApp fijo en el lado -->
+    <div class="whatsapp">
+        <a href="https://wa.me/5493794591718?" target="_blank">
+            <img src="img/whatsapp.svg" alt="WhatsApp">
+        </a>
+    </div>
+  
+    <!-- Botón de Instagram fijo en el lado -->
+    <div class="instagram">
+        <a href="https://www.instagram.com/joonui3d/" target="_blank">
+            <img src="img/instagram_1.png" alt="Instagram">
+        </a>
+    </div>
+  </footer>
+  
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a90f1b68c4.js" crossorigin="anonymous"></script>   
+    <script src="js/Open&Close.js"></script>
+    <script src="js/menu.js"></script>   
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/slider.js"></script>
+       
+</body>
+</html>

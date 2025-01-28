@@ -1,0 +1,666 @@
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+:root {
+    --red: #ff2e63;
+    --black: #252a34;
+    --blue: #08d9d6;
+    --white: #eaeaea;
+    --title: 35px;
+    --text: 19px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffff;
+    overflow-x: hidden;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.go-top {
+    position: fixed;
+    bottom: 140px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #2a1f59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s;
+    margin: 0 5px;
+    border-radius: 50px;
+    right: 0%;
+}
+
+.go-top:hover {
+    background: var(--red);
+    color: #fff;
+    border: 2px solid var(--white);
+}
+
+.go-top:hover span {
+    color: var(--white);
+}
+
+.go-top>span {
+    font-size: 30px;
+    color: var(--black);
+}
+
+
+/* Estilo general del contenedor del menú */
+nav.menu {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #0a0816, #3a2c80);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 785px) {
+    nav.menu {
+        flex-direction: column; /* Cambiar la disposición a columna en pantallas pequeñas */
+        width: 237px; /* Establecer el ancho del menú a 237px */
+        padding: 10px; /* Ajustar el padding en pantallas pequeñas */
+    }
+
+    /* Ajustar el logo y el menú para que no se vean demasiado grandes en pantallas pequeñas */
+    nav.menu .logo {
+        margin-bottom: 10px; /* Separar el logo del menú en pantallas pequeñas */
+    }
+
+    nav.menu ul {
+        width: 100%; /* Asegurarse de que el menú ocupe todo el ancho disponible */
+        text-align: center; /* Centrar los íconos del menú */
+    }
+
+    nav.menu li {
+        width: 100%; /* Que cada ítem ocupe todo el ancho disponible */
+        padding: 10px 0; /* Ajustar el padding para que haya espacio suficiente */
+    }
+}
+
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    nav.menu {
+        width: 100%; /* Asegura que el menú ocupe todo el ancho en pantallas más pequeñas */
+        padding: 10px 0;
+    }
+    nav.menu ul {
+        text-align: center;
+    }
+    nav.menu li {
+        padding: 8px 0;
+    }
+}
+
+
+/* Logo */
+.logo-container {
+    flex-shrink: 0; /* Evita que el logo cambie de tamaño */
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Altura del logo */
+    max-width: 100%;
+}
+
+/* Menú */
+.menu-links {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centra los elementos del menú */
+    align-items: center;
+    flex-grow: 1; /* El menú ocupa el espacio restante */
+    
+   }
+
+   .impresion-3d {
+    background: white; /* Fondo blanco para los dos primeros */
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+   
+}
+
+.home-link {
+    background: #f85408bf; /* Fondo anaranjado para el Home */
+    padding: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white; /* Color del texto */
+}
+
+.impresion-3d i.fas,
+.home-link i.fas {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.home-link i.fas.fa-home {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+/* Colores específicos para cada enlace */
+.menu-links a.violet {
+    background-color: #2f265d;
+    color: white;
+}
+
+.menu-links a.white {
+    background-color: white;
+    color: #2f265d;
+    border: 2px solid #2f265d;
+}
+
+/* Hover para todos los enlaces */
+.menu-links a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav.menu {
+        flex-direction: column; /* Alinea el contenido en columna */
+        align-items: center;
+    }
+
+    .logo-container {
+        align-self: flex-start; /* Alinea el logo al principio */
+    }
+
+    .menu-links {
+        flex-direction: column; /* Los elementos del menú estarán en columna */
+        gap: 10px; /* Reduce el espacio entre botones */
+    }
+
+    .menu-links a {
+        width: 100%; /* Ocupa el ancho completo del contenedor */
+        text-align: center; /* Asegura que el texto esté centrado */
+        padding: 10px; /* Ajusta el padding para pantallas pequeñas */
+    }
+}
+
+/* Opcional: Estilo para pantallas medianas */
+@media (max-width: 1024px) {
+    .menu-links a {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        padding: 8px 15px; /* Ajusta el padding */
+    }
+}
+
+
+
+
+/* Diseño general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Filtros */
+.filters {
+    flex: 0 0 20%; /* Ancho inicial de los filtros */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.filters h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.filters label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.filters select,
+.filters input,
+.filters button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.filters button {
+    background-color: #3a2c80;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #2a1f59;
+}
+
+/* Productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #3a2c80;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #3a2c80;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #2a1f59;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .filters {
+        flex: 0 0 25%;
+    }
+
+    .products {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-wrap: nowrap; /* Mantiene los filtros al lado */
+        gap: 10px;
+    }
+
+    .filters {
+        flex: 0 0 30%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .filters {
+        flex: 0 0 35%;
+    }
+
+    .products {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+}
+
+
+  
+/** Footer **/
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0;
+    margin-top: 10px;
+}
+
+.footer .deg-footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer .footer-text {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-text p {
+    margin: 15px 0;
+}
+
+.footer .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.footer .footer-socials a img {
+    width: 20px;
+    transition: transform 0.3s;
+}
+
+.footer .footer-socials a img:hover {
+    transform: scale(1.2);
+}
+
+
+.whatsapp img,
+.instagram img {
+    width: 60%;
+    margin-top: 15%;
+}
+
+@media only screen and (max-width: 590px) {
+    .footer .footer-text {
+        font-size: 16px;
+    }
+    .footer .footer-socials a img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+  .whatsapp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    right: 0px;
+    background-color: #3a2c80;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 5px;
+  }  
+
+.whatsapp img{   
+    
+    margin-top: 14%;
+}
+
+.instagram {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 13px;
+    right: 0px;
+    bottom: 25px; 
+    background-color: #3a2c80;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 5px
+}
+
+.instagram img {
+    width: 55%;
+    margin-top: 23%;
+}
+
+.precio {
+    padding:4px;
+    /*background-color: #000000;*/
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    }
+
+.separator {
+    border-top: 4px solid #000;  /* Una línea de 1px de grosor y color negro */
+    margin: 10px 0;  /* Espaciado alrededor de la línea */
+  }
+
+/* Estilo para los párrafos dentro del contenedor precio */
+.precio p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Añadir texto dinámico para "Medidas" */
+.medidas::before {
+    content: "Medidas: ";
+    font-weight: bold;
+}
+
+/* Añadir texto dinámico para "Precio" */
+.valor::before {
+    content: "Precio: ";
+    font-weight: bold;
+}
+
+#no-results {
+    display: none;
+    position: fixed; /* Para que se quede en el centro de la pantalla */
+    top: 35%; /* 50% desde la parte superior */
+    left: 50%; /* 50% desde la parte izquierda */
+    transform: translate(-50%, -50%); /* Ajuste para que quede completamente centrado */
+    background-color: #3a2c80; /* Fondo oscuro con algo de transparencia */
+    color: white; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+
+/* General del banner */
+.minimal-banner {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    z-index: -1;
+    width: 100%; /* Aseguramos que el banner ocupe todo el ancho */
+}
+
+/* Contenedor de las slides */
+.banner-wrapper {
+    display: flex;
+    width: 100%; /* El contenedor de las slides ocupa el 100% del ancho */
+    animation: slideFade 12s infinite;
+}
+
+/* Cada slide */
+.slider {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Texto del slider */
+.slider h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.slider p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+/* Animación */
+@keyframes slideFade {
+    0%, 20% { transform: translateX(0%); }
+    33.33%, 53.33% { transform: translateX(-100%); }
+    66.66%, 86.66% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+    /* Asegura que las slides sigan siendo de 100% del ancho */
+    .banner-wrapper {
+        width: 100%; /* Ocupa el 100% del ancho */
+    }
+    .slider {
+        padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+    .slider h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    }
+    .slider p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+  .product {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #333;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 300; 
+}
+
+.valor {
+    color: #000000;
+    
+}
+
+.medidas {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.titulo {
+    margin-bottom: -10px;
+    margin-left: 10px;
+}
