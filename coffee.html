@@ -70,21 +70,31 @@
   </div>
 
   <div id="step3" class="hidden">
-    <div class="line">&gt; Access granted</div>
-    <div class="line">Este escritorio fue intervenido por una mente creativa.</div>
-    <div class="line">El café no es opcional. Es infraestructura crítica.</div>
-    <div class="brand">
-      <strong>TuMarca Informática</strong><br>
-      Diseño · Personalización · Impresión<br>
-      Convertimos objetos cotidianos en identidad técnica.
-    </div>
+  <div class="line">&gt; Access granted</div>
+  <div class="line">Este escritorio fue intervenido por una mente creativa.</div>
+  <div class="line">El café no es opcional. Es infraestructura crítica.</div>
+
+  <div class="brand">
+    <strong>Joonui</strong><br>
+    Diseño · Personalización · Impresión<br>
+    Convertimos objetos cotidianos en identidad técnica.
   </div>
+
+  <button onclick="resetSystem()">Reiniciar sistema</button>
+</div>
+
 </div>
 
 <script>
 function nextStep(step) {
   document.getElementById("step" + step).classList.add("hidden");
   document.getElementById("step" + (step + 1)).classList.remove("hidden");
+}
+
+function resetSystem() {
+  document.getElementById("step3").classList.add("hidden");
+  document.getElementById("step2").classList.add("hidden");
+  document.getElementById("step1").classList.remove("hidden");
 }
 </script>
 
