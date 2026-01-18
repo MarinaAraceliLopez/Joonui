@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Coffee.exe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -15,6 +16,7 @@
       align-items: center;
       min-height: 100vh;
     }
+
     .terminal {
       width: 90%;
       max-width: 700px;
@@ -23,7 +25,9 @@
       box-shadow: 0 0 25px rgba(0,255,156,0.3);
       background: radial-gradient(circle at top, #0f1a15, #050807);
     }
+
     .line { margin-bottom: 10px; }
+
     button {
       background: transparent;
       border: 1px solid #00ff9c;
@@ -33,8 +37,14 @@
       font-family: inherit;
       margin-top: 20px;
     }
-    button:hover { background: #00ff9c; color: #000; }
+
+    button:hover {
+      background: #00ff9c;
+      color: #000;
+    }
+
     .hidden { display: none; }
+
     .brand {
       margin-top: 25px;
       border-top: 1px dashed #00ff9c;
@@ -42,18 +52,51 @@
       color: #7dffd1;
       font-size: 0.9rem;
     }
+
+    .socials {
+      margin-top: 15px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      color: #00ff9c;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #00ff9c;
+      padding: 6px 10px;
+      transition: 0.2s;
+    }
+
+    .socials a:hover {
+      background: #00ff9c;
+      color: #000;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
   </style>
 </head>
+
 <body>
 
 <div class="terminal">
+
+  <!-- STEP 1 -->
   <div id="step1">
     <div class="line">&gt; Initializing Coffee.exe</div>
     <div class="line">&gt; Loading human_module...</div>
     <div class="line">&gt; Status: RUNNING ☕</div>
-    <button onclick="nextStep(1)">Continuar</button>
+    <button onclick="startBoot()">Continuar</button>
   </div>
 
+  <!-- STEP 2 -->
   <div id="step2" class="hidden">
     <div class="line">
       if (coffee == null) {<br>
@@ -66,36 +109,76 @@
       }
     </div>
     <div class="line">// Warning: Do not interrupt this process</div>
-    <button onclick="nextStep(2)">Acceder al sistema</button>
+    <button onclick="accessSystem()">Acceder al sistema</button>
   </div>
 
+  <!-- STEP 3 -->
   <div id="step3" class="hidden">
-  <div class="line">&gt; Access granted</div>
-  <div class="line">Este escritorio fue intervenido por una mente creativa.</div>
-  <div class="line">El café no es opcional. Es infraestructura crítica.</div>
+    <div class="line">&gt; Access granted</div>
+    <div class="line">Este escritorio fue intervenido por una mente creativa.</div>
+    <div class="line">El café no es opcional. Es infraestructura crítica.</div>
 
-  <div class="brand">
-    <strong>Joonui</strong><br>
-    Diseño · Personalización · Impresión<br>
-    Convertimos objetos cotidianos en identidad técnica.
+    <div class="brand">
+      <strong>Joonui</strong><br>
+      Diseño · Personalización · Impresión<br>
+      Convertimos objetos cotidianos en identidad técnica.
+
+      <div class="socials">
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/joonui3d/" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/>
+          </svg>
+          Instagram
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/543794591718" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/>
+          </svg>
+          WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+    <button onclick="resetSystem()">Reiniciar sistema</button>
   </div>
 
-  <button onclick="resetSystem()">Reiniciar sistema</button>
 </div>
 
-</div>
+<!-- AUDIO -->
+<audio id="bootSound">
+  <source src="data:audio/wav;base64,UklGRlYAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=">
+</audio>
+
+<audio id="errorSound">
+  <source src="data:audio/wav;base64,UklGRlYAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQAAAAA=">
+</audio>
 
 <script>
-function nextStep(step) {
-  document.getElementById("step" + step).classList.add("hidden");
-  document.getElementById("step" + (step + 1)).classList.remove("hidden");
-}
+  function startBoot() {
+    document.getElementById("bootSound").play();
+    nextStep(1);
+  }
 
-function resetSystem() {
-  document.getElementById("step3").classList.add("hidden");
-  document.getElementById("step2").classList.add("hidden");
-  document.getElementById("step1").classList.remove("hidden");
-}
+  function accessSystem() {
+    document.getElementById("errorSound").play();
+    nextStep(2);
+  }
+
+  function nextStep(step) {
+    document.getElementById("step" + step).classList.add("hidden");
+    document.getElementById("step" + (step + 1)).classList.remove("hidden");
+  }
+
+  function resetSystem() {
+    document.getElementById("step3").classList.add("hidden");
+    document.getElementById("step2").classList.add("hidden");
+    document.getElementById("step1").classList.remove("hidden");
+  }
 </script>
 
 </body>
